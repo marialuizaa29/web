@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.background {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+}
+.conteudo {
+  position: relative;
+  text-align: center;
+}
+
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: -1000px;
+}
+
+.card {
+  background: red;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  background: #e94560;
+}
+
+.cenario{
+  position: relative;
+  height: 200px;
+}
+@keyframes correr {
+  0% { left: 0; }
+  50% { transform: translateY(-40px); }
+  100% { left: 85%; }
+}
+
+@keyframes cair {
+  0% {
+    top: -50px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    top: 650px;
+    opacity: 0;
+  }
+}
+
+@keyframes piscar {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.robo{
+  position: absolute;
+  animation: correr 6s linear infinite;
+}
+.robo img{
+  width: 150px;
+  height: 150px;
+}
+
+.haxel {
+  left: 0;
+  bottom: -550px;
+}
+
+.airon {
+  left: 0;
+  bottom: -550px;
+  animation-delay: 2s;
+}
+
+.optimus {
+  left: 0;
+  bottom: -550px;
+  animation-delay: 3s;
+  
+}
+
+.walle {
+  left: 0;
+  bottom: -550px;
+  animation-delay: 4s;
+}
+
+.item {
+  position: absolute;
+  font-size: 30px;
+  animation: cair 3s infinite;
+}
+
+.estrela { top: 50px; left: 30%; }
+.moeda { top: 100px; left: 60%; }
+.energia { top: 150px; left: 40%; }
+.coracao { top: 80px; left: 75%; }
+
+.obstaculo {
+  position: absolute;
+  bottom: -490px;
+}
+
+.pedra {
+  left: 50%;
+    font-size: 80px;
+  animation: piscar 1s infinite;
+}
+
+.fogo {
+  left: 80%;
+  font-size: 80px;
+  animation: piscar 1s infinite;
+}
+
+.botoes {
+  margin-top: 550px;
+  display: flex;
+    justify-content: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.iniciar { background: green; }
+.reiniciar { background: red; }
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px white;
+}
